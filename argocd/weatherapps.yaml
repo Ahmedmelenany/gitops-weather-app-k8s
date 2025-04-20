@@ -11,7 +11,7 @@ spec:
     path: kubernetes/argocd/apps
   destination:
     server: https://kubernetes.default.svc
-    namespace: weatherapp
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true

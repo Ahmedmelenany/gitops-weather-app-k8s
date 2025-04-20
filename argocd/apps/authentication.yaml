@@ -2,17 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: authentication-app
-  namespace: weatherapp
+  namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Ahmedmelenany/gitops-weather-app-k8s.git
     targetRevision: HEAD
-    path: kubernetes/argocd/apps
+    path: kubernetes/authentication
   destination:
     server: https://kubernetes.default.svc
     namespace: weatherapp
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true

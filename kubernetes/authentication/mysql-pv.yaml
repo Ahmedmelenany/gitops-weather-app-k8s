@@ -5,6 +5,8 @@ metadata:
   name: mysql-pv
   labels:
     app: storage
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
   capacity:
     storage: 5Gi

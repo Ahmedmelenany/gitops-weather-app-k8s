@@ -4,10 +4,6 @@ metadata:
   name: weatherapp-ui-ingress
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - weatherapp.local
-      secretName: weatherapp-ui-tls
   rules:
     - host: weatherapp.local
       http:
