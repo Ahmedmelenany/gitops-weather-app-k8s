@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Ahmedmelenany/gitops-weather-app-k8s.git
     targetRevision: HEAD
-    path: kubernetes/argocd/apps
+    path: ./kubernetes/argocd/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
