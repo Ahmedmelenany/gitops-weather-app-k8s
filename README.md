@@ -99,7 +99,7 @@ kubeseal -o yaml --scope cluster-wide --cert sealedsecret.crt < weather-secret.y
 
 ### Access application ingress using its nodeport service to access the deployed applications through URL.
 
-![ingress ](./Images/Screenshot-3.png)
+![ingress ](./Images/Screenshot-03.png)
 
 ---
 
