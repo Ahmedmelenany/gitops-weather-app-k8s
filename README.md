@@ -1,10 +1,10 @@
-# 🚀 Using ArgoCD + SealedSecrets on Kubeadm Cluster
+# Using ArgoCD + SealedSecrets on Kubeadm Cluster
 
 Install [ArgoCD](https://argo-cd.readthedocs.io/) and [Bitnami SealedSecrets](https://github.com/bitnami-labs/sealed-secrets) in a Kubernetes cluster provisioned with **kubeadm** version *1.31.7*.
 
 ---
 
-## 🧱 Prerequisites
+## Prerequisites
 
 - A running Kubernetes cluster provisioned using `kubeadm`
 - `kubectl` configured and pointing to the cluster
@@ -12,7 +12,7 @@ Install [ArgoCD](https://argo-cd.readthedocs.io/) and [Bitnami SealedSecrets](ht
 
 ---
 
-## 📦 Install ArgoCD via Helm
+## Install ArgoCD via Helm
 
 1. **Create the `argocd` namespace**
 
@@ -43,7 +43,7 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 
 ---
 
-## 🔐 Install Bitnami SealedSecrets
+## Install Bitnami SealedSecrets
 
 1. **Add Bitnami Helm repo**
 
@@ -103,7 +103,7 @@ kubeseal -o yaml --scope cluster-wide --cert sealedsecret.crt < weather-secret.y
 
 ---
 
-## 📚 References
+## References
 
 - Bitnami SealedSecrets: https://github.com/bitnami-labs/sealed-secrets
 - SealedSecrets CLI: https://github.com/bitnami-labs/sealed-secrets#installation

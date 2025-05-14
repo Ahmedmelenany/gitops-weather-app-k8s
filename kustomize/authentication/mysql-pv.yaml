@@ -1,0 +1,17 @@
+#static persistance volume for mysql
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv-0
+  labels:
+    app: storage
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/mysql"
